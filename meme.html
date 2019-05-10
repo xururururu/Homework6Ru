@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>my Pikachu library</title>
+</head>
+<style>
+	body {background-color: grey;}
+</style>
+
+<body>
+	<parent-child></parent-child>
+	<script src="./tags/parent-child.tag" type="riot/tag"></script>
+	<script src="./tags/child.tag" type="riot/tag"></script>
+	<script src="https://cdn.jsdelivr.net/riot/3.1.0/riot+compiler.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+
+	<script>
+
+  // Initialize Firebase
+	var config = {
+     apiKey: "AIzaSyATZ43MMW5XL0E_rQUNj9B39-d4G5cJ1Qk",
+     authDomain: "filter-236f1.firebaseapp.com",
+     databaseURL: "https://filter-236f1.firebaseio.com",
+     projectId: "filter-236f1",
+     storageBucket: "filter-236f1.appspot.com",
+     messagingSenderId: "12047473969"
+   };
+
+  firebase.initializeApp(config);
+	var database = firebase.database();
+	var rootRef = database.ref('/');
+
+
+
+
+		riot.mount('*');
+	</script>
+</body>
+
+</html>
